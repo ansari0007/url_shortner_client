@@ -31,6 +31,8 @@ const Shortner = () => {
 
 
     const handleCopy=async()=>{
+        e.preventDefault()
+
         await navigator.clipboard.writeText(shortUrl)
     }
 
@@ -45,9 +47,9 @@ const Shortner = () => {
             <h2>Hi There ! Welcome to Url Shortner</h2>
             <br/>
             <br/>
-            <p>Step -1 Copy your Long URL</p>
-            <p>Step -2 Paste your Long URL into input field</p>
-            <p>Step -3 Press Submit and then use</p>
+            <p>Step -1 Copy your Long URL from anywhere</p>
+            <p>Step -2 Paste your Long URL in first input field and press submit</p>
+            <p>Step -3 copy Short URL from second input field and you are good to go</p>
             <form className="hero-form" onSubmit={handleSubmit}>
               <div className="hero-form-input">
                 <input className="hero-email-input" type="url" ref={url} placeholder="eg:- https://www.example.com/xyz...." required/>
