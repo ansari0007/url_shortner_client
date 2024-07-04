@@ -30,7 +30,7 @@ const Shortner = () => {
     }
 
 
-    const handleCopy=async()=>{
+    const handleCopy=async(e)=>{
         e.preventDefault()
 
         await navigator.clipboard.writeText(shortUrl)
