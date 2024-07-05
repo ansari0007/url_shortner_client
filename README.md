@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+## Architecture Choice and Reasoning
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Introduction
+This URL Shortener application is built using the **MERN stack**, which comprises **MongoDB**, **Express.js**, **React.js**, and **Node.js**. The MERN stack is chosen for its full-stack JavaScript capabilities, enabling seamless development and integration of both the front-end and back-end components.
 
-## Available Scripts
+### Architecture Overview
+The architecture of the URL Shortener application is designed to ensure efficiency, scalability, and maintainability. It consists of the following key components:
 
-In the project directory, you can run:
+1. **Frontend**: React.js [GitHub repo](https://github.com/ansari0007/url_shortner_client.git)
+2. **Backend**: Node.js and Express.js [GitHub repo](https://github.com/ansari0007/url_shortner_server.git)
+3. **Database**: MongoDB
+4. **Deployment**: Vercel for frontend and backend
 
-### `npm start`
+### Frontend: React.js [Frontend repo](https://github.com/ansari0007/url_shortner_client.git)
+- **Component-Based Architecture**: React.js allows for a modular approach to building the user interface. Each part of the application is broken down into reusable components, making the codebase easier to manage and scale.
+- **State Management**: State is managed using React's built-in hooks, such as `useState` and `useEffect`, providing a smooth user experience.
+- **User Experience**: React enables the creation of a responsive and dynamic user interface, allowing users to interact with the application in real-time without needing to reload the page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Backend: Node.js and Express.js [backend repo](https://github.com/ansari0007/url_shortner_server.git)
+- **RESTful API**: The backend is designed using Express.js, which provides a robust set of features for web and mobile applications. The API follows RESTful principles, ensuring clear separation of concerns and predictable URLs.
+- **Asynchronous Processing**: Node.js handles asynchronous operations efficiently, making it ideal for I/O-bound tasks such as database interactions and handling numerous concurrent connections.
+- **Middleware**: Express.js middleware is used for request parsing, authentication, logging, and error handling, ensuring the backend remains modular and maintainable.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Database: MongoDB
+- **NoSQL Flexibility**: MongoDB is chosen for its flexible schema design, which allows for the storage of diverse data structures. This flexibility is particularly useful for a URL shortener application where the data model can evolve over time.
+- **Scalability**: MongoDB’s scalability and performance features are crucial for handling a large volume of URLs and user data, ensuring the application can grow without significant restructuring.
+- **Integration**: The use of Mongoose, an ODM (Object Data Modeling) library for MongoDB, provides a straightforward way to interact with the database, enabling data validation, schema design, and query building.
 
-### `npm test`
+### Deployment: Vercel
+- **Seamless Deployment**: Vercel is used for deploying both the frontend and backend of the application. It provides an easy-to-use platform for continuous deployment, ensuring that updates to the codebase are automatically reflected in the live application.
+- **Scalability and Performance**: Vercel optimizes the deployment for performance and scalability, ensuring that the application remains responsive under load.
+- **Serverless Functions**: Backend functions are deployed as serverless functions, providing automatic scaling and reducing the need for managing server infrastructure.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**frontend deployment**
+[Visit here](url-shortner-client-omega.vercel.app
+)
+**backend deployment**
+[Visit here](https://url-shortner-server-xi.vercel.app/)
+### Reasoning Behind Choices
+1. **Unified Language**: By using JavaScript across the entire stack, the development process is streamlined, and developers can work on both frontend and backend without needing to switch contexts.
+2. **Efficiency**: Node.js’s non-blocking I/O model and MongoDB’s flexible schema make the stack particularly efficient for handling real-time data and high traffic.
+3. **Community and Ecosystem**: The MERN stack has a strong community and a rich ecosystem of libraries and tools, which accelerates development and allows for quick resolution of issues.
+4. **Scalability**: Each component of the MERN stack is designed to scale horizontally, ensuring that the application can handle increasing load by adding more instances rather than complex refactoring.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Conclusion
+The choice of the MERN stack for this URL Shortener application provides a robust, scalable, and maintainable architecture. It leverages the strengths of each component, ensuring a seamless development experience and a high-performance application.
